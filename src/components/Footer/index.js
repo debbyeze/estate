@@ -46,7 +46,7 @@ const Footer = () => {
           <img
             src={foot}
             alt="Company "
-            className="h-screen w-full"
+            className="h-screen w-full hidden sm:block"
           />
         </div>
       </div>
