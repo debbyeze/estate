@@ -38,7 +38,11 @@ return(
         <Stats/>
       </section>
 
+<<<<<<< HEAD
       <section className="tour h-screen px-5 lg:px-60 flex justify-center items-center">
+=======
+      <section className="tour h-screen px-5 to lg:px-60 flex justify-center items-center">
+>>>>>>> bebc7b16c085a50fcd40fb6058f0e7e6271c27d4
          <div className="container text-center text-white ">
            <h4 className="font-semibold tracking-tight text-2xl sm:text-3xl">EXPLORE A VIDEO TOUR</h4>
            <p className="py-2 mb-3">Experience your dream property from the comfort of your own home with our immersive video tours! Walk through stunning interiors, explore every detail of the layout, and visualize yourself in each space—all with just a click.
