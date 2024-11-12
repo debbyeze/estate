@@ -10,7 +10,7 @@ const Home = () => {
 return(
   <>
     <Hero/>
-     <div className='about-us bg-brown h-screen px-10 lg:px-60 flex justify-center items-center ' id="about">
+     <div className='about-us bg-brown h-screen px-5 lg:px-60 flex justify-center items-center ' id="about">
       <div className='container text-center text-offwhite'>
         <p className='mb-4'>Welcome to HEAVEN ESTATE, your trusted partner in real estate. Whether you're looking to buy your dream home, sell a property, or invest in real estate, we are here to guide you through every step of the journey. With a deep understanding of the market, personalized service, and a commitment to excellence, we make the process seamless and rewarding.</p>
         <p>At HEAVEN ESTATE, we believe in building relationships based on trust, transparency, and results. Our team of experienced agents is dedicated to providing expert advice, cutting-edge marketing strategies, and local market insights to ensure you achieve your real estate goals.</p>
@@ -38,10 +38,10 @@ return(
         <Stats/>
       </section>
 
-      <section className="tour h-screen px-10 lg:px-60 flex justify-center items-center">
+      <section className="tour h-screen px-5 lg:px-60 flex justify-center items-center">
          <div className="container text-center text-white ">
            <h4 className="font-semibold tracking-tight text-2xl sm:text-3xl">EXPLORE A VIDEO TOUR</h4>
-           <p className="py-2">Experience your dream property from the comfort of your own home with our immersive video tours! Walk through stunning interiors, explore every detail of the layout, and visualize yourself in each space—all with just a click.
+           <p className="py-2 mb-3">Experience your dream property from the comfort of your own home with our immersive video tours! Walk through stunning interiors, explore every detail of the layout, and visualize yourself in each space—all with just a click.
           </p>
           <Video/>
          </div>

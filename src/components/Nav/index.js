@@ -10,7 +10,7 @@ import { faHouzz} from "@fortawesome/free-brands-svg-icons";
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Properties', href: '/properties' },
-  { name: 'Testimonial', href: '#testimonial' },
+  { name: 'List your property', href: `mailto:deborahsong7@gmail.com?subject= I want to list a property` },
   { name: 'Contact', href: '/contact' },
 ]
 const Nav = () => {
@@ -21,7 +21,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
      <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 ">
           <div className="flex lg:flex-1">
-           <a href="#" className="-m-1.5 p-1.5">
+           <a href="/" className="-m-1.5 p-1.5">
                <i className='text-3xl m-1'><FontAwesomeIcon icon={faHouzz} color="#f4f1ec"/></i> 
                <span className='text-offwhite font-semibold'>HEAVEN ESTATE</span>
               </a>
@@ -53,7 +53,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                <i className='text-3xl m-1'><FontAwesomeIcon icon={faHouzz} color="#A7A7A7"/></i> 
                <span className='text-brown font-semibold'>HEAVEN ESTATE</span>
               </a>

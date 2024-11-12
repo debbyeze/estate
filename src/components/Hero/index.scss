@@ -1,6 +1,21 @@
-.hero{
-   background-image:url("../../../public/images/bg.jpg");
-   background-size: cover;
-   background-position: top;
 
+.hero{
+  animation: bgSlide 15s ease-in-out infinite;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+}
+ @keyframes bgSlide {
+0%{
+   background-image:url("../../../public/images/bg.jpg");
+}
+50%{
+     background-image:url("../../../public/images/real12.jpg");
+
+}
+ 100%{
+      background-image:url("../../../public/images/bg.jpg");
+
+ }  
 }

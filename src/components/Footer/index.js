@@ -16,7 +16,7 @@ const Footer = () => {
               </a>
           </div>
            <div className="my-12 flex">
-              <a href="#" className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer mb-2">
+              <a href={`mailto:deborahsong7@gmail.com?subject= I want to list a property`} className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer mb-2">
                 LIST YOUR HOUSE
               </a>
                <a href="/properties" className="bg-white px-3.5 text-sm font-semibold leading-6 text-brown px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer lg:mx-3 mb-2">
@@ -46,7 +46,7 @@ const Footer = () => {
           <img
             src={foot}
             alt="Company "
-            className="h-screen w-full hidden sm:block"
+            className="h-screen w-full hidden md:block"
           />
         </div>
       </div>

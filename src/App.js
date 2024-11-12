@@ -7,7 +7,7 @@ import Properties from './components/Properties';
 import NoPage from './components/NoPage';
 import ErrorPage from './components/error-page';
 import Overview from './components/Overview';
-import Contact from './components/Contact/index,js';
+import Contact from './components/Contact/index.js';
 
 function App() {
 
