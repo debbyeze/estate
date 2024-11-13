@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouzz, faTwitter, faInstagram, faFacebook} from "@fortawesome/free-brands-svg-icons";
+import { faHouzz, faLinkedin, faInstagram, faFacebook} from "@fortawesome/free-brands-svg-icons";
 import foot from "../../assets/images/real9.jpg";
 
 const Footer = () => {
@@ -34,9 +34,16 @@ const Footer = () => {
           
 
           <p>
-          <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faFacebook} color="#f4f1ec"/></i> 
-          <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faTwitter} color="#f4f1ec"/></i> 
-          <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faInstagram} color="#f4f1ec"/></i> 
+          <a href="https://www.facebook.com/theodora.ezenwankwor
+         " target="_blank" rel="noreferrer">
+             <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faFacebook} color="#f4f1ec"/></i>
+          </a>
+          <a href="https://www.linkedin.com/in/deborah-samuel-ogbuji" target="_blank" rel="noreferrer">
+              <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faLinkedin} color="#f4f1ec"/></i>
+          </a> 
+          <a href="https://www.instagram.com/deborahsamuelogbuji?igsh=ZGUzMzM3NWJiOQ==" target="_blank" rel="noreferrer">
+             <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faInstagram} color="#f4f1ec"/></i> 
+          </a> 
           
           </p>
 
