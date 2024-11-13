@@ -44,9 +44,25 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-offwhite">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            <div class="w-full max-w-sm max-w-[200px]">
+  <div class="relative bg-white">
+    <input
+      class="w-full  placeholder:text-slate-400 text-brown text-sm border border-slate-200 rounded-md pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none shadow-sm focus:shadow"
+      placeholder="Search properties" 
+    />
+    <button
+      class="absolute top-1 right-1 flex items-center rounded bg-offwhite py-1 px-2.5 border border-transparent text-center text-sm text-brown transition-all shadow-sm hover:shadow focus:bg-brown focus:shadow-none active:bg-brown hover:bg-brown active:shadow-none
+      active:text-white 
+      focus:text-white 
+       hover:text-white  disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      type="button"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-2">
+        <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+      </svg>
+    </button> 
+  </div>
+            </div>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -80,12 +96,23 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-brown hover:bg-brown hover:text-light"
-                  >
-                    Log in
-                  </a>
+                  <div class="w-full max-w-sm max-w-[200px]">
+  <div class="relative">
+    <input
+      class="w-full bg-transparent placeholder:text-slate-400 text-brown text-sm border border-slate-200 rounded-md pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none focus:border-brown hover:border-brown shadow-sm focus:shadow"
+      placeholder="Search properties" 
+    />
+    <button
+      class="absolute top-1 right-1 flex items-center rounded bg-offwhite py-1 px-2.5 border border-transparent text-center text-sm text-brown transition-all shadow-sm hover:shadow focus:bg-brown focus:shadow-none focus:text-offwhite hover:text-offwhite 
+      active:text-offwhite active:bg-brown hover:bg-brown active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      type="button"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-2">
+        <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+      </svg>
+    </button> 
+  </div>
+            </div>
                 </div>
               </div>
             </div>
