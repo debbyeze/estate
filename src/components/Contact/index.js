@@ -15,11 +15,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Field, Label, Switch } from '@headlessui/react'
-
 export default function Contact() {
-  const [agreed, setAgreed] = useState(false)
 
   return (
   <section className=" bg-brown pt-16">
@@ -36,7 +32,7 @@ export default function Contact() {
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="first-name" className="block text-sm/6 font-semibold text-brown">
               First name
             </label>
             <div className="mt-2.5">
@@ -50,7 +46,7 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="last-name" className="block text-sm/6 font-semibold text-brown">
               Last name
             </label>
             <div className="mt-2.5">
@@ -64,7 +60,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="email" className="block text-sm/6 font-semibold text-brown">
               Email
             </label>
             <div className="mt-2.5">
@@ -78,7 +74,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-brown">
               Phone number
             </label>
             <div className=" mt-2.5">
@@ -92,7 +88,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
+            <label htmlFor="message" className="block text-sm/6 font-semibold text-brown">
               Message
             </label>
             <div className="mt-2.5">

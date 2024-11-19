@@ -5,7 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouzz} from "@fortawesome/free-brands-svg-icons";
-
+import {useNavigate} from 'react-router-dom';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -14,7 +14,19 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
 ]
 const Nav = () => {
-const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+
+const [searchTerm, setSearchTerm] = useState("");
+const navigate = useNavigate();
+
+  const handleSearch =() =>{
+   if (searchTerm.trim()) {
+       navigate(`/properties/${searchTerm}`);
+   
+   }
+  
+  };
 
  return(
    <>
@@ -43,14 +55,16 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <div class="w-full max-w-sm max-w-[200px]">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:ml-10 lg:pl-10">
+            <div class="w-full w-[200px]">
   <div class="relative bg-white">
     <input
-      class="w-full  placeholder:text-slate-400 text-brown text-sm border border-slate-200 rounded-md pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none shadow-sm focus:shadow"
+      class="w-full placeholder:text-slate-400 text-brown text-sm border border-slate-200 rounded-md pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none shadow-sm focus:shadow"
       placeholder="Search properties" 
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
     />
-    <button
+    <button onClick={handleSearch}
       class="absolute top-1 right-1 flex items-center rounded bg-offwhite py-1 px-2.5 border border-transparent text-center text-sm text-brown transition-all shadow-sm hover:shadow focus:bg-brown focus:shadow-none active:bg-brown hover:bg-brown active:shadow-none
       active:text-white 
       focus:text-white 
@@ -95,14 +109,17 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
                     </a>
                   ))}
                 </div>
+
+                {/* search */}
                 <div className="py-6">
                   <div class="w-full max-w-sm max-w-[200px]">
   <div class="relative">
     <input
       class="w-full bg-transparent placeholder:text-slate-400 text-brown text-sm border border-slate-200 rounded-md pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none focus:border-brown hover:border-brown shadow-sm focus:shadow"
-      placeholder="Search properties" 
+      placeholder="Search properties" value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
     />
-    <button
+    <button onClick={handleSearch}
       class="absolute top-1 right-1 flex items-center rounded bg-offwhite py-1 px-2.5 border border-transparent text-center text-sm text-brown transition-all shadow-sm hover:shadow focus:bg-brown focus:shadow-none focus:text-offwhite hover:text-offwhite 
       active:text-offwhite active:bg-brown hover:bg-brown active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
