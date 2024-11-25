@@ -19,7 +19,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path='/contact' element={<Contact/>} />
             <Route path="/properties" element={<Properties />} />
-            <Route path="/properties/:id" element={<Overview />} />
+             <Route path="/properties/:search" element={<Properties />} />
+            <Route path="/properties/property/:id" element={<Overview />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
