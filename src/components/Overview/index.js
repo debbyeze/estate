@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faWhatsapp} from "@fortawesome/free-brands-svg-icons";
-import {faCreditCard} from "@fortawesome/free-solid-svg-icons";
+import {faCartPlus} from "@fortawesome/free-solid-svg-icons";
 import listing from "../../assets/listing.json";
 import PropertyCard from "../PropertyCard";
 import NoPage from "../NoPage";
@@ -66,8 +66,8 @@ export default function Overview() {
                        <button
                         type="submit"
                         className="mt-6 flex w-full items-center justify-center mx-3 rounded-md border-2 border-brown  px-8 py-3 text-base font-medium text-brown focus:outline-none focus:ring-offset-2"
-                      ><i className='text-1xl m-1'><FontAwesomeIcon icon={faCreditCard} /></i>
-                       PURCHASE
+                      ><i className='text-2xl m-1'><FontAwesomeIcon icon={faCartPlus} /></i>
+                       ADD TO CART
                       </button>
                  </div>
                 </section>

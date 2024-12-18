@@ -23,7 +23,7 @@ const [searchCategory, setSearchCategory] = useState("");
 const navigate = useNavigate();
 
   const handleSearch =() =>{
-   const searchTermed = searchTerm.replace(/[\s,]+/g, ' ').trim();
+   const searchTermed = searchTerm.toLowerCase().replace(/[\s,]+/g, ' ').trim();
    if (searchTermed) {
        navigate(`/properties/${searchCategory}?search=${searchTermed}`);
    
