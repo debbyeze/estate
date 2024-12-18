@@ -81,7 +81,7 @@ export default function Overview() {
 
 {/* featured houses */}
         <section className="  bg-offwhite py-10">
-          <h3 className="text-2xl font-semibold tracking-tight text-brown pt-20 text-start sm:text-3xl uppercase px-8">
+          <h3 className="text-2xl font-semibold tracking-tight text-brown pt-20 text-start sm:text-3xl uppercase  md:px-16">
             Featured {house.type}s
           </h3>
             <div className=" mx-auto max-w-2xl px-2 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-16 lg:py-8">
