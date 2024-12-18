@@ -18,11 +18,14 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 
 const [searchTerm, setSearchTerm] = useState("");
+const [searchCategory, setSearchCategory] = useState("");
+
 const navigate = useNavigate();
 
   const handleSearch =() =>{
-   if (searchTerm.trim()) {
-       navigate(`/properties/${searchTerm}`);
+   const searchTermed = searchTerm.replace(/[\s,]+/g, ' ').trim();
+   if (searchTermed) {
+       navigate(`/properties/${searchCategory}?search=${searchTermed}`);
    
    }
   
@@ -57,9 +60,17 @@ const navigate = useNavigate();
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:ml-10 lg:pl-10">
             <div className="w-full w-[200px]">
-  <div className="relative bg-white">
+  <div className="relative flex bg-white rounded-md">
+  <select id="countries" class="bg-brown border border-offwhite text-white text-sm focus:ring-brown focus:border-brown display-inline p-6 pt-2.5 pb-2.5" value={searchCategory}
+      onChange={(e) => setSearchCategory(e.target.value)}>
+    <option>Location</option>
+    <option>Type</option>
+    <option>features</option>
+    <option>description</option>
+
+  </select>
     <input
-      className="w-full placeholder:text-slate-400 text-brown text-sm border border-slate-200 rounded-md pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none shadow-sm focus:shadow"
+      className=" placeholder:text-slate-400 text-brown text-sm border border-slate-200  pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none shadow-sm focus:shadow"
       placeholder="Search properties" 
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}

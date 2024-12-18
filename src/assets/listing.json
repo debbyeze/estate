@@ -5,11 +5,11 @@
           "id":"1",
           "img":"http://localhost:3000/images/real1.jpg",
           "type":"home",
-          "href": "/properties/property/home-1-2 Beds | 2 Baths | 2 Sitting room",
+          "href": "/properties/property/home-1-2 Bedroom | 2 Baths | 2 Sitting room",
           "location":"Airport road, Umogwa",
-          "space":"2 Beds | 2 Baths | 2 Sitting room",
+          "features":"2 Bedroom | 2 Baths | 2 Sitting room",
           "price":"2000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         },
         {
@@ -18,9 +18,9 @@
            "img":"http://localhost:3000/images/real7.jpg",
            "href": "/properties/property/commercial-2-4 Office rooms | 3 toilet | 2 Conference hall",
           "location":"Woji Estate",
-          "space":"4 Office rooms | 3 toilet | 2 Conference hall",
+          "features":"4 Office rooms | 3 toilet | 2 Conference hall",
           "price":"25000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         
         },
@@ -28,11 +28,11 @@
          "id":"3",
           "img":"http://localhost:3000/images/real2.jpg",
           "type":"home",
-          "href": "/properties/property/home-3-1 Beds | 1 Baths | 1 Sitting room",
+          "href": "/properties/property/home-3-1 Bedroom | 1 Baths | 1 Sitting room",
           "location":"Benin City",
-          "space":"1 Beds | 1 Baths | 1 Sitting room",
+          "features":"1 Bedroom | 1 Baths | 1 Sitting room",
           "price":"1000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         
         },
@@ -42,9 +42,9 @@
           "type":"commercial",
           "href": "/properties/property/commercial-4-6 commercial rooms | 3 toilet | 1 Conference hall",
           "location":"Airport road, Umogwa",
-          "space":"6 commercial rooms | 3 toilet | 1 Conference hall",
+          "features":"6 commercial rooms | 3 toilet | 1 Conference hall",
           "price":"20000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         
         },
@@ -52,11 +52,11 @@
          "id":"5",
           "img":"http://localhost:3000/images/real5.jpg",
           "type":"home",
-          "href": "/properties/property/home-5-4 Beds | 2 Baths | 2 Sitting room",
+          "href": "/properties/property/home-5-4 Bedroom | 2 Baths | 2 Sitting room",
           "location":"GRA port Harcourt",
-          "space":"4 Beds | 2 Baths | 2 Sitting room",
+          "features":"4 Bedroom | 2 Baths | 2 Sitting room",
           "price":"2400",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         },
         {
@@ -65,9 +65,9 @@
            "img":"http://localhost:3000/images/real12.jpg",
            "href": "/properties/property/commercial-6-4 commercial rooms | 3 toilet | 2 Conference hall",
           "location":"Woji Estate",
-          "space":"4 commercial rooms | 3 toilet | 2 Conference hall",
+          "features":"4 commercial rooms | 3 toilet | 2 Conference hall",
           "price":"25000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         },
         {
@@ -76,9 +76,9 @@
           "type":"bare land",
           "href": "/properties/property/bare land-7-15 Acres or 1500 sq.meters of land",
           "location":"Benin City",
-          "space":"15 Acres or 1500 sq.meters of land",
+          "features":"15 Acres or 1500 sq.meters of land",
           "price":"2,000000",
-          "details":"Bare land situated in the heart of the city with exceptional opportunity for investors and developers. whether you envision for agricultural, home or commercial purpose."
+          "description":"Bare land situated in the heart of the city with exceptional opportunity for investors and developers. whether you envision for agricultural, home or commercial purpose."
         },
         {
          "id":"8",
@@ -86,20 +86,20 @@
            "img":"http://localhost:3000/images/real10.jpg",
            "href": "/properties/property/commercial-8-4 commercial rooms | 3 toilet | 2 Conference hall",
           "location":"Woji Estate",
-          "space":"4 commercial rooms | 3 toilet | 2 Conference hall",
+          "features":"4 commercial rooms | 3 toilet | 2 Conference hall",
           "price":"25000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         },
         {
          "id":"9",
            "type":"home",
            "img":"http://localhost:3000/images/real11.jpg",
-           "href": "/properties/property/home-9-2 Beds | 2 Baths | 2 Sitting room",
+           "href": "/properties/property/home-9-2 Bedroom | 2 Baths | 2 Sitting room",
          "location":"Airport road, Umogwa",
-          "space":"2 Beds | 2 Baths | 2 Sitting room",
+          "features":"2 Bedroom | 2 Baths | 2 Sitting room",
           "price":"2000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         },
         {
@@ -108,20 +108,20 @@
           "type":"bare land",
           "href": "/properties/property/bare land-11-10 Acres or 1000 sq.meters of land",
           "location":"Ikeja, Lagos",
-          "space":"10 Acres or 1000 sq.meters of land",
+          "features":"10 Acres or 1000 sq.meters of land",
           "price":"1,000000",
-          "details":"Bare land situated in the heart of the city with exceptional opportunity for investors and developers. whether you envision for agricultural, home or commercial purpose."
+          "description":"Bare land situated in the heart of the city with exceptional opportunity for investors and developers. whether you envision for agricultural, home or commercial purpose."
         
         },
          {
          "id":"12",
            "type":"home",
            "img":"http://localhost:3000/images/real8.jpg",
-           "href": "/properties/property/home-12-1 Beds | 1 Baths | 1 Sitting room",
+           "href": "/properties/property/home-12-1 Bedroom | 1 Baths | 1 Sitting room",
           "location":"Woji Estate",
-          "space":"1 Beds | 1 Baths | 1 Sitting room",
+          "features":"1 Bedroom | 1 Baths | 1 Sitting room",
           "price":"1000",
-          "details":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this space is perfect."
+          "description":"Discover urban apartment at its finest condo located in the heart of the city. With stunning city views and modern finishes, this features is perfect."
         
         }
     ]

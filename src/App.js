@@ -8,6 +8,7 @@ import NoPage from './components/NoPage';
 import ErrorPage from './components/error-page';
 import Overview from './components/Overview';
 import Contact from './components/Contact/index.js';
+import Search from './components/Search/index.js';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path='/contact' element={<Contact/>} />
             <Route path="/properties" element={<Properties />} />
-             <Route path="/properties/:search" element={<Properties />} />
+             <Route path="/properties/:search" element={<Search />} />
             <Route path="/properties/property/:id" element={<Overview />} />
             <Route path="*" element={<NoPage />} />
           </Route>

@@ -10,7 +10,7 @@ export default function Overview() {
   const { id } = useParams();
 
   const house = listing.properties.find(
-    (entry) => entry.type + "-" + entry.id + "-" + entry.space === id
+    (entry) => entry.type + "-" + entry.id + "-" + entry.features === id
   );
 
   const msg = `Hello, I am interested in purchasing the property ${id}. Could you provide more details?`;
@@ -51,8 +51,8 @@ export default function Overview() {
                 <h3 id="information-heading" className="sr-only">
                   Product information
                 </h3>
-                <p>Spaces: {house.space}</p>
-                <p className="my-5">{house.details}</p>
+                <p>Features: {house.features}</p>
+                <p className="my-5">{house.description}</p>
                 <p className="text-2xl">&#x20A6;{house.price}</p>
                  <div className="md:flex">
                     <a

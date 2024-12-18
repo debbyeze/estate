@@ -47,7 +47,7 @@ return(
          </div>
       </section>
       <section className="bg-light py-10" id="testimonial">
-            <h2 className="text-3xl font-semibold tracking-tight text-brown pt-20 text-center sm:text-4xl uppercase">Client Testimonials</h2>
+            <h2 className="text-3xl font-semibold tracking-tight text-brown pt-20 text-center sm:text-3xl uppercase">Client Testimonials</h2>
 
           <div className=" mx-auto max-w-2xl px-8 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-16 lg:py-8 lg:pb-24">
         <div className="grid container  grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-12">
