@@ -66,7 +66,7 @@ export default function Overview() {
                        <button
                         type="submit"
                         className="mt-6 flex w-full items-center justify-center sm:mx-0 md:mx-3 rounded-md border-2 border-brown  px-8 py-3 text-base font-medium text-brown focus:outline-none focus:ring-offset-2"
-                      ><i className='text-2xl m-1'><FontAwesomeIcon icon={faCartPlus} /></i>
+                      ><i className='sm:text-1xl md:text-2xl m-1'><FontAwesomeIcon icon={faCartPlus} /></i>
                        ADD TO CART
                       </button>
                  </div>
