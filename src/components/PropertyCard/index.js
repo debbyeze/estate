@@ -15,7 +15,7 @@ export default function PropertyCard({property}) {
                 />
               </div>
               <h6 className="mt-4 text-brown font-semibold">{property.location}</h6>
-              <p className="text-sm text-brown font-medium">{property.features}</p>
+              <p className="text-sm text-brown">{property.features}</p>
               <p className="mt-1 text-md font-medium text-brown">&#x20A6;{property.price}</p>
             </a>
       
