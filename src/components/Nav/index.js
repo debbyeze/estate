@@ -71,7 +71,7 @@ const navigate = useNavigate();
 
   </select>
     <input
-      className=" placeholder:text-slate-400 text-brown text-sm border border-slate-200  pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none shadow-sm focus:shadow"
+      className="w-full placeholder:text-slate-400 text-brown text-sm border border-slate-200  pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none shadow-sm focus:shadow"
       placeholder="Search properties" 
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
