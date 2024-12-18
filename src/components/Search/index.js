@@ -22,7 +22,7 @@ const Search = () =>{
         { filterProperties.length > 0 ? (filterProperties.map((property)=>(
        <PropertyCard key={property.id} property= {property}/>
         ))): (
-          <p className="text-brown ">No {searchTerm} property found</p>
+          <p className="text-brown ">No {searchTerm}  property found</p>
         )};
        </div>
       </div>

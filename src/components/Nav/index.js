@@ -63,6 +63,7 @@ const navigate = useNavigate();
   <div className="relative flex bg-white rounded-md">
   <select id="countries" className="bg-brown border border-offwhite text-white text-sm focus:ring-brown focus:border-brown display-inline p-6 pt-2.5 pb-2.5" value={searchCategory}
       onChange={(e) => setSearchCategory(e.target.value)}>
+      <option>Category...</option>
     <option>Location</option>
     <option>Type</option>
     <option>features</option>
