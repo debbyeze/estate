@@ -124,7 +124,15 @@ const navigate = useNavigate();
                 {/* search */}
                 <div className="py-6">
                   <div class="w-full max-w-sm max-w-[200px]">
-  <div class="relative">
+  <div class="relative flex rounded-md ">
+  <select id="countries" class="bg-brown border border-offwhite text-white text-sm focus:ring-brown focus:border-brown display-inline p-6 pt-2.5 pb-2.5" value={searchCategory}
+      onChange={(e) => setSearchCategory(e.target.value)}>
+    <option>Location</option>
+    <option>Type</option>
+    <option>features</option>
+    <option>description</option>
+
+  </select>
     <input
       class="w-full bg-transparent placeholder:text-slate-400 text-brown text-sm border border-slate-200 rounded-md pl-3 pr-4 py-2 transition duration-300 ease focus:outline-none focus:border-brown hover:border-brown shadow-sm focus:shadow"
       placeholder="Search properties" value={searchTerm}
