@@ -57,7 +57,7 @@ export default function Overview() {
                  <div className="md:flex">
                     <a
                         href={whatsappLink} target="_blank" rel="noopener noreferrer"
-                        className="mt-6 flex w-full items-center justify-center rounded-md border-2 border-offwhite bg-offwhite  px-8 py-3 text-base font-medium  text-brown focus:outline-none focus:ring-offset-2"
+                        className="mt-6 flex w-full items-center justify-center rounded-md border-2 border-brown bg-offwhite  px-8 py-3 text-base font-medium  text-brown focus:outline-none focus:ring-offset-2"
                       >
 
                       <i className='text-2xl m-1'><FontAwesomeIcon icon={faWhatsapp} /></i>

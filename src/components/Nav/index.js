@@ -61,7 +61,7 @@ const navigate = useNavigate();
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:ml-10 lg:pl-10">
             <div className="w-full w-[200px]">
   <div className="relative flex bg-white rounded-md">
-  <select id="countries" className="bg-brown border border-offwhite text-white text-sm focus:ring-brown focus:border-brown display-inline p-6 pt-2.5 pb-2.5" value={searchCategory}
+  <select id="countries" className="bg-brown border border-offwhite text-white text-sm focus:ring-brown focus:border-brown display-inline p-6 pt-2 pb-2" value={searchCategory}
       onChange={(e) => setSearchCategory(e.target.value)}>
       <option>Category...</option>
     <option>Location</option>
