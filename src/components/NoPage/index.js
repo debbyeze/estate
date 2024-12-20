@@ -1,6 +1,10 @@
+import PageTitle from "../page-title";
+
 export default function NoPage() {
   return (
     <>
+       <PageTitle title="No page | Heaven estate"/>
+
       <main className="pt-16 bg-brown">
       <section className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">

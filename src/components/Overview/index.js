@@ -5,6 +5,7 @@ import {faCartPlus} from "@fortawesome/free-solid-svg-icons";
 import listing from "../../assets/listing.json";
 import PropertyCard from "../PropertyCard";
 import NoPage from "../NoPage";
+import PageTitle from "../page-title";
 
 export default function Overview() {
   const { id } = useParams();
@@ -36,6 +37,8 @@ export default function Overview() {
     );
   }
   return (
+  <>
+     <PageTitle title={id + " | Heaven estate"}/>
     <section className="pt-16 bg-brown">
       <div className="bg-offwhite relative isolate px-6 pt-8">
         <div className="relative flex w-full items-center px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-white">
@@ -119,5 +122,6 @@ export default function Overview() {
         </section>
       </div>
     </section>
+    </>
   );
 }

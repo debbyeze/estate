@@ -15,6 +15,7 @@
 'use client'
 
 import { useState } from 'react'
+import PageTitle from '../page-title';
 export default function Contact() {
 
   const [fname, setFname] = useState('');
@@ -34,6 +35,8 @@ export default function Contact() {
 
 
   return (
+  < >
+     <PageTitle title="Contact Us | Heaven estate"/>
   <section className=" bg-brown pt-16">
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div
@@ -129,5 +132,6 @@ export default function Contact() {
       </form>
     </div>
     </section>
+    </>
   )
 }
