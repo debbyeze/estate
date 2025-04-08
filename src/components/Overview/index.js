@@ -6,7 +6,6 @@ import listing from "../../assets/listing.json";
 import PropertyCard from "../PropertyCard";
 import NoPage from "../NoPage";
 import PageTitle from "../page-title";
-import {useCart} from "../Cart";
 
 export default function Overview() {
   const { id } = useParams();
@@ -30,11 +29,7 @@ export default function Overview() {
     listing.properties.filter((entry) => entry.type !== house.type)
   );
 
-  const {addToCart} = useCart();
-
-  const handleAddToCart = () => {
-     addToCart(house);
-  }
+ 
 
   if (!house) {
     return (
@@ -71,14 +66,9 @@ export default function Overview() {
                       >
 
                       <i className='text-2xl m-1'><FontAwesomeIcon icon={faWhatsapp} /></i>
-                       ENQUIRY
+                       MAKE ENQUIRY
                       </a>
-                       <button
-                        type="submit"
-                        className="mt-6 flex w-full items-center justify-center sm:mx-0 md:mx-3 rounded-md border-2 border-brown  px-8 py-3 text-base font-medium text-brown focus:outline-none focus:ring-offset-2"
-                      ><i className='sm:text-1xl md:text-1xl m-1' onClick={handleAddToCart}><FontAwesomeIcon icon={faCartPlus} /></i>
-                       ADD TO CART
-                      </button>
+                       
                  </div>
                 </section>
              </div>
