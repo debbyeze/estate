@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faWhatsapp} from "@fortawesome/free-brands-svg-icons";
-import {faCartPlus} from "@fortawesome/free-solid-svg-icons";
 import listing from "../../assets/listing.json";
 import PropertyCard from "../PropertyCard";
 import NoPage from "../NoPage";
 import PageTitle from "../page-title";
+
 
 export default function Overview() {
   const { id } = useParams();
