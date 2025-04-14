@@ -15,6 +15,7 @@ const Search = () =>{
    return (
    <>
     <section className=" bg-brown pt-16">
+    
    <div className="bg-offwhite relative isolate px-6 pt-1">
     <h2 className="text-3xl font-semibold tracking-tight text-brown pt-20 text-center sm:text-4xl">PROPERTIES FOR SALE</h2>
     <div className=" mx-auto max-w-2xl px-2 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-16 lg:py-8">
