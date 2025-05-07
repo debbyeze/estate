@@ -22,7 +22,7 @@ export default function Testimonial() {
   return (
   <>
     {testimonies.map((testimony)=>(
-      <div className="mx-auto max-w-2xl lg:max-w-4xl">
+      <div className="mx-auto max-w-2xl lg:max-w-4xl" key={testimony.id}>
         <figure className="mt-10">
           <blockquote className="text-center  text-brown text-sm">
             <p>

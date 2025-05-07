@@ -35,8 +35,8 @@ const Overview = ({house}) => {
   
 
   const addToCart = useCartStore((state) => state.addToCart);
-
-  
+const cart = useCartStore((state) => state.cart);
+  const isInCart = cart.some(item => item.id === house.id);
  
 
   if (!house) {
@@ -77,13 +77,20 @@ const Overview = ({house}) => {
                       <i className='text-2xl m-1'><FontAwesomeIcon icon={faWhatsapp} /></i>
                        MAKE ENQUIRY
                       </Link>
-                      <button
+                      
+                      {!isInCart?
+<button
                         className="mt-6 flex w-full items-center justify-center rounded-md  bg-brown  px-8 py-3 text-base font-medium  text-white md:ml-3 focus:outline-none focus:ring-offset-2 hover:px-9"
-                       onClick={() => addToCart(house)}>
-
-                      <Heart size={24} fill="white" className="mr-3 hover:py-1"/>
+                       onClick={() => addToCart(house)}>                      <Heart size={24}  className="mr-3 hover:py-1"/>
                       SAVE FAVOURITE
                       </button>
+                      :
+<button
+                        className="mt-6 flex w-full items-center justify-center rounded-md  bg-brown  px-8 py-3 text-base font-medium  text-white md:ml-3 focus:outline-none focus:ring-offset-2 hover:px-9"
+                       >                      <Heart size={24} fill="white"  className="mr-3 hover:py-1"/>
+                      SAVED AS FAVOURITE
+                      </button>
+}
                        
                  </div>
                 </section>

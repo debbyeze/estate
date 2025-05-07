@@ -24,8 +24,9 @@ const useCartStore = create(persist((set) => ({
     }),
   clearCart: () => set({ cart: [] }),
 
-  
+
 }),
+
   {
     name: 'heaven estate saved property',
     getStorage: () => localStorage
