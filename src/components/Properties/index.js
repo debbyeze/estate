@@ -5,7 +5,6 @@ import PropertyCard from "../PropertyCard";
 import {useNavigate} from 'react-router-dom';
 
 
-
 const Properties = () =>{
 
 const [searchTerm, setSearchTerm] = useState("");
@@ -21,6 +20,7 @@ const navigate = useNavigate();
    }
   
   };
+
       
    return (
    <>

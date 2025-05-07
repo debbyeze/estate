@@ -32,6 +32,8 @@ const Overview = ({house}) => {
     listing.properties.filter((entry) => entry.type !== house.type)
   );
 
+  
+
   const addToCart = useCartStore((state) => state.addToCart);
 
   

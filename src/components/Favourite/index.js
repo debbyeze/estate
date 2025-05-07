@@ -5,16 +5,20 @@ const Favourite = () => {
 
 const cart = useCartStore((state) =>state.cart );
  console.log("props"+cart);
+
+    const removeFromCart = useCartStore((state) => state.removeFromCart);
+
+
     return ( 
        <main className="pt-16 bg-brown">
         <section className="relative bg-white py-5 px-2 sm:px-6 ">
         
 <div className="mx-auto   shadow-2xl py-5 max-w-[1000px] bg-white h-screen">
 {cart.length>0?
-<h2 className="text-2xl font-semibold tracking-tight text-brown my-3 mx-3 sm:mx-5 text-left lg:px-20 sm:text-3xl">Your Favourite Propert{cart.length>1? "ies": "y"}</h2>
+<h2 className="text-2xl font-semibold tracking-tight text-brown my-3 mx-3 sm:mx-5 text-left lg:px-20 sm:text-3xl">Saved Favourite Propert{cart.length>1? "ies": "y"}</h2>
 :
 <div className="flex justify-center items-center">
-<h2 className="text-2xl font-semibold tracking-tight text-brown my-3 mx-3 sm:mx-5 text-left lg:px-20 sm:text-3xl"> No Saved Propery</h2>
+<h2 className="text-2xl font-semibold tracking-tight text-brown my-3 mx-3 sm:mx-5 text-left lg:px-20 sm:text-3xl"> No Saved Property</h2>
 </div>
 }
 {cart.map((prop) => (
@@ -35,7 +39,7 @@ const cart = useCartStore((state) =>state.cart );
        
        
        <div className="py-4">
-        <X size={20} color="black" className="cursor-pointer mt-3 md:pl-1"/>
+        <X size={18} color="black" className="cursor-pointer sm:mt-3 md:pl-1" onClick={() => removeFromCart(prop.id)}/>
        </div>
        </div>
      ))}

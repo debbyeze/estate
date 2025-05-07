@@ -1,7 +1,8 @@
 // stores/cartStore.js
 import { create } from 'zustand';
+import {persist} from 'zustand/middleware';
 
-const useCartStore = create((set) => ({
+const useCartStore = create(persist((set) => ({
   cart: [],
   addToCart: (house) => 
     set((state) => {
@@ -19,19 +20,18 @@ const useCartStore = create((set) => ({
     }),
   removeFromCart: (propertyId) =>
     set((state) => {
-      const existingItem = state.cart.find(item => item.id === propertyId);
-      if (existingItem.quantity > 1) {
-        return {
-          cart: state.cart.map(item =>
-            item.id === propertyId
-              ? { ...item, quantity: item.quantity - 1 }
-              : item
-          )
-        };
-      }
-      return { cart: state.cart.filter(item => item.id !== propertyId) };
+             return { cart: state.cart.filter(item => item.id !== propertyId) };
     }),
   clearCart: () => set({ cart: [] }),
-}));
+
+  
+}),
+  {
+    name: 'heaven estate saved property',
+    getStorage: () => localStorage
+  }
+));
+
+
 
 export default useCartStore;
