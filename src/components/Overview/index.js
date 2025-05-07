@@ -27,6 +27,7 @@ const Overview = ({house}) => {
     )
   );
 
+
   const oppositeProperties = shuffleArray(
     listing.properties.filter((entry) => entry.type !== house.type)
   );
@@ -75,7 +76,7 @@ const Overview = ({house}) => {
                        MAKE ENQUIRY
                       </Link>
                       <button
-                        className="mt-6 flex w-full items-center justify-center rounded-md  bg-brown  px-8 py-3 text-base font-medium  text-white md:ml-3 focus:outline-none focus:ring-offset-2"
+                        className="mt-6 flex w-full items-center justify-center rounded-md  bg-brown  px-8 py-3 text-base font-medium  text-white md:ml-3 focus:outline-none focus:ring-offset-2 hover:px-9"
                        onClick={() => addToCart(house)}>
 
                       <Heart size={24} fill="white" className="mr-3 hover:py-1"/>
