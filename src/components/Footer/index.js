@@ -2,6 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouzz, faLinkedin, faInstagram, faFacebook} from "@fortawesome/free-brands-svg-icons";
 import foot from "../../assets/images/real9.jpg";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -10,18 +12,18 @@ const Footer = () => {
         
         <div className="flex-1 md:text-left bg-brown py-10 px-20 text-white" id="contact">
         <div className="flex lg:flex-1">
-           <a href="/" className="-m-1.5 p-1.5">
+           <Link to="/" className="-m-1.5 p-1.5">
                <i className='text-3xl m-1'><FontAwesomeIcon icon={faHouzz} color="#f4f1ec"/></i> 
                <span className='text-offwhite font-semibold'>HEAVEN ESTATE</span>
-              </a>
+              </Link>
           </div>
            <div className="my-12 flex">
-              <a href={`mailto:deborahsong7@gmail.com?subject= I want to list a property`} className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer mb-2">
+              <Link to={`mailto:deborahsong7@gmail.com?subject= I want to list a property`} className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer mb-2">
                 LIST YOUR HOUSE
-              </a>
-               <a href="/properties" className="bg-white px-3.5 text-sm font-semibold leading-6 text-brown px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer lg:mx-3 mb-2">
+              </Link>
+               <Link to="/properties" className="bg-white px-3.5 text-sm font-semibold leading-6 text-brown px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer lg:mx-3 mb-2">
                 BUY A HOME
-              </a>
+              </Link>
             </div>
           <h3 className="text-xl font-bold mb-8 uppercase">GET IN TOUCH</h3>
           <p className="mb-1">Main Office</p>
@@ -34,16 +36,16 @@ const Footer = () => {
           
 
           <p>
-          <a href="https://www.facebook.com/theodora.ezenwankwor
+          <Link to="https://www.facebook.com/theodora.ezenwankwor
          " target="_blank" rel="noreferrer">
              <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faFacebook} color="#f4f1ec"/></i>
-          </a>
-          <a href="https://www.linkedin.com/in/deborah-samuel-ogbuji" target="_blank" rel="noreferrer">
+          </Link>
+          <Link to="https://www.linkedin.com/in/deborah-samuel-ogbuji" target="_blank" rel="noreferrer">
               <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faLinkedin} color="#f4f1ec"/></i>
-          </a> 
-          <a href="https://www.instagram.com/deborahsamuelogbuji?igsh=ZGUzMzM3NWJiOQ==" target="_blank" rel="noreferrer">
+          </Link> 
+          <Link to="https://www.instagram.com/deborahsamuelogbuji?igsh=ZGUzMzM3NWJiOQ==" target="_blank" rel="noreferrer">
              <i className='text-1xl m-1 rounded-full p-1 border-1'><FontAwesomeIcon icon={faInstagram} color="#f4f1ec"/></i> 
-          </a> 
+          </Link> 
           
           </p>
 

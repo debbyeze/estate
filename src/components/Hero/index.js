@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import './index.scss';
 export default function Hero() {
   
@@ -21,9 +21,9 @@ export default function Hero() {
               Want to buy or sell a home in Nigeria? I make it easy.
             </h1>
             <div className="mt-10">
-              <a href="/properties" className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer">
+              <Link to="/properties" className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer">
                 Buy a home
-              </a>
+              </Link>
             </div>
           </div>
         </div>

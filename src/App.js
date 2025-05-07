@@ -9,6 +9,7 @@ import ErrorPage from './components/error-page';
 import Overview from './components/Overview';
 import Contact from './components/Contact/index.js';
 import Search from './components/Search/index.js';
+import Favourite from './components/Favourite/index.js';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/contact' element={<Contact/>} />
             <Route path="/properties" element={<Properties />} />
              <Route path="/properties/:search" element={<Search />} />
+              <Route path = "/properties/favourite" element={<Favourite/>}/>
             <Route path="/properties/property/:id" element={<Overview />} />
             <Route path="*" element={<NoPage />} />
           </Route>

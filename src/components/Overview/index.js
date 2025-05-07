@@ -1,24 +1,26 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faWhatsapp} from "@fortawesome/free-brands-svg-icons";
 import listing from "../../assets/listing.json";
 import PropertyCard from "../PropertyCard";
 import NoPage from "../NoPage";
 import PageTitle from "../page-title";
+import {Heart} from 'lucide-react';
+import useCartStore from "../store";
 
 
-export default function Overview() {
+const Overview = ({house}) => {
   const { id } = useParams();
 
-  const house = listing.properties.find(
+   house = listing.properties.find(
     (entry) => entry.type + "-" + entry.id + "-" + entry.features === id
   );
 
   const msg = `Hello, I am interested in purchasing the property ${id}. Could you provide more details?`;
   const encodedMessage = encodeURIComponent(msg);
   const whatsappLink = `https://wa.me/2348149623877?text=${encodedMessage}`;
-  const shuffleArray = (array) => array.sort(() => 0.5 - Math.random());
 
+  const shuffleArray = (array) => array.sort(() => 0.5 - Math.random());
   const featuredProperties = shuffleArray(
     listing.properties.filter(
       (entry) => entry.type === house.type && entry.id !== house.id
@@ -29,6 +31,9 @@ export default function Overview() {
     listing.properties.filter((entry) => entry.type !== house.type)
   );
 
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  
  
 
   if (!house) {
@@ -43,6 +48,7 @@ export default function Overview() {
      <PageTitle title={id + " | Heaven estate"}/>
     <section className="pt-16 bg-brown">
       <div className="bg-offwhite relative isolate px-6 pt-8">
+      
         <div className="relative flex w-full items-center px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-white">
         <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 ">
             <div className="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
@@ -60,14 +66,21 @@ export default function Overview() {
                 <p className="my-5">{house.description}</p>
                 <p className="text-2xl">&#x20A6;{house.price}</p>
                  <div className="md:flex">
-                    <a
-                        href={whatsappLink} target="_blank" rel="noopener noreferrer"
+                    <Link
+                        to={whatsappLink} target="_blank" rel="noopener noreferrer"
                         className="mt-6 flex w-full items-center justify-center rounded-md border-2 border-brown bg-offwhite  px-8 py-3 text-base font-medium  text-brown focus:outline-none focus:ring-offset-2"
                       >
 
                       <i className='text-2xl m-1'><FontAwesomeIcon icon={faWhatsapp} /></i>
                        MAKE ENQUIRY
-                      </a>
+                      </Link>
+                      <button
+                        className="mt-6 flex w-full items-center justify-center rounded-md  bg-brown  px-8 py-3 text-base font-medium  text-white md:ml-3 focus:outline-none focus:ring-offset-2"
+                       onClick={() => addToCart(house)}>
+
+                      <Heart size={24} fill="white" className="mr-3 hover:py-1"/>
+                      SAVE FAVOURITE
+                      </button>
                        
                  </div>
                 </section>
@@ -122,3 +135,4 @@ export default function Overview() {
     </>
   );
 }
+export default Overview;

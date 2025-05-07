@@ -5,15 +5,32 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouzz} from "@fortawesome/free-brands-svg-icons";
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import useCartStore from '../store';
+
+const Nav = () => {
+
+let savedQuantity = useCartStore((state) => state.cart.length);
+console.log(savedQuantity);
+
+let plural;
+
+  if (savedQuantity > 1){
+   plural = "s";  
+
+}else{
+plural = "";
+};
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Properties', href: '/properties' },
-  { name: 'List your property', href: `mailto:deborahsong7@gmail.com?subject= I want to list a property` },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Home', to: '/' },
+  { name: 'Properties', to: '/properties' },
+  { name: 'List your property', to: `mailto:deborahsong7@gmail.com?subject= I want to list a property` },
+  { name: 'Contact', to: '/contact' },
+  {name:  'Favourite' + plural + "(" + savedQuantity + ")", to: '/properties/favourite'}
 ]
-const Nav = () => {
+
+
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 
@@ -31,15 +48,17 @@ const navigate = useNavigate();
   
   };
 
+  
+
  return(
    <>
      <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 ">
           <div className="flex lg:flex-1">
-           <a href="/" className="-m-1.5 p-1.5">
+           <Link to="/" className="-m-1.5 p-1.5">
                <i className='text-3xl m-1'><FontAwesomeIcon icon={faHouzz} color="#f4f1ec"/></i> 
                <span className='text-offwhite font-semibold'>HEAVEN ESTATE</span>
-              </a>
+              </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -53,9 +72,9 @@ const navigate = useNavigate();
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-offwhite">
+              <Link key={item.name} to={item.to} className="text-sm font-semibold leading-6 text-offwhite">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:ml-10 lg:pl-10">
@@ -95,10 +114,10 @@ const navigate = useNavigate();
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5">
+              <Link to="/" className="-m-1.5 p-1.5">
                <i className='text-3xl m-1'><FontAwesomeIcon icon={faHouzz} color="#A7A7A7"/></i> 
                <span className='text-brown font-semibold'>HEAVEN ESTATE</span>
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
@@ -112,13 +131,13 @@ const navigate = useNavigate();
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.to}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-brown hover:bg-brown hover:text-light "
                     >
                       {item.name } 
-                    </a>
+                    </Link>
                     
                   ))}
                   

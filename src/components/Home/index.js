@@ -5,6 +5,8 @@ import Stats from "../Stats";
 import Video from "../video";
 import "./index.scss";
 import Testimonial from "../testimonial";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
 return(
@@ -15,9 +17,9 @@ return(
         <p className='mb-4'>Welcome to HEAVEN ESTATE, your trusted partner in real estate. Whether you're looking to buy your dream home, sell a property, or invest in real estate, we are here to guide you through every step of the journey. With a deep understanding of the market, personalized service, and a commitment to excellence, we make the process seamless and rewarding.</p>
         <p>At HEAVEN ESTATE, we believe in building relationships based on trust, transparency, and results. Our team of experienced agents is dedicated to providing expert advice, cutting-edge marketing strategies, and local market insights to ensure you achieve your real estate goals.</p>
         <div className="mt-10">
-              <a href="/contact" className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer">
+              <Link to="/contact" className="border-2 border-white px-3.5 text-sm font-semibold leading-6 text-offwhite px-3.5 py-2.5 uppercase hover:px-6 cursor-pointer">
                 Consult Today
-              </a>
+              </Link>
             </div>
       </div>
     </div>

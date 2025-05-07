@@ -5,7 +5,7 @@ export default function PropertyCard({property}) {
 
   return (
         
-            <Link  to={property.href} className="group">
+            <Link  to={property.to} className="group">
           
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg xl:aspect-h-8 xl:aspect-w-7">
                <span className="bg-light uppercase font-light text-brown font-light text-sm p-2 ">{property.type}</span>
