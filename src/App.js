@@ -10,12 +10,14 @@ import Overview from './components/Overview';
 import Contact from './components/Contact/index.js';
 import Search from './components/Search/index.js';
 import Favourite from './components/Favourite/index.js';
+import ScrollTop from './components/ScrollTop.js';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+      <ScrollTop/>
         <Routes>
           <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
             <Route index element={<Home />} />
