@@ -32,7 +32,7 @@ const cart = useCartStore((state) =>state.cart );
             <p className="text-sm text-brown">{prop.features}</p>
          </div>
          <div className="md:ml-20">
-          <h6 className="mt-4 text-brown font-semibold">{prop.price}</h6>
+          <h6 className="mt-4 text-brown font-semibold">&#x20A6;{prop.price}</h6>
        </div>
        </div>
        </Link>
