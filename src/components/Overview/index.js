@@ -11,10 +11,11 @@ import useCartStore from "../store";
 
 const Overview = ({house}) => {
   const { id } = useParams();
-
+    const url = id.split('-');
    house = listing.properties.find(
-    (entry) => entry.type + "-" + entry.id + "-" + entry.features === id
+    (entry) => entry.id === url.find(ur => !isNaN(ur))
   );
+  console.log(house);
 
   const msg = `Hello, I am interested in purchasing the property ${id}. Could you provide more details?`;
   const encodedMessage = encodeURIComponent(msg);

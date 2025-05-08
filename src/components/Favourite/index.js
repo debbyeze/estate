@@ -4,7 +4,6 @@ import useCartStore from "../store";
 const Favourite = () => {
 
 const cart = useCartStore((state) =>state.cart );
- console.log("props"+cart);
 
     const removeFromCart = useCartStore((state) => state.removeFromCart);
 

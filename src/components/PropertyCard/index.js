@@ -4,10 +4,13 @@ import useCartStore from "../store";
 export default function PropertyCard({property}) {
 const cart = useCartStore((state) => state.cart);
   const isInCart = cart.some(item => item.id === property.id);
+      const formattedUrl = property.to.replace(/\s/g, '-');
+
+
 
   return (
         
-            <Link  to={property.to} className="group">
+            <Link  to={formattedUrl} className="group">
 
           
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg xl:aspect-h-8 xl:aspect-w-7">

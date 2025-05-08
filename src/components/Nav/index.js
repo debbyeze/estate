@@ -11,7 +11,6 @@ import useCartStore from '../store';
 const Nav = () => {
 
 let savedQuantity = useCartStore((state) => state.cart.length);
-console.log(savedQuantity);
 
 let plural;
 
