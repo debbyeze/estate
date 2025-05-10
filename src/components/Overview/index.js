@@ -16,7 +16,6 @@ const Overview = ({house}) => {
    house = listing.properties.find(
     (entry) => entry.id === url.find(ur => !isNaN(ur))
   );
-  console.log(house);
 
   const msg = `Hello, I am interested in purchasing the property ${id}. Could you provide more details?`;
   const encodedMessage = encodeURIComponent(msg);
@@ -56,9 +55,9 @@ const cart = useCartStore((state) => state.cart);
       
         <div className="relative flex w-full items-center px-4 pb-8 pt-14 rounded-lg shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-white">
         <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 ">
-            <div className="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg sm:col-span-6 lg:col-span-6 xl:flex">
+            <div className="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg sm:col-span-6 lg:col-span-6 xl:flex relative">
               <img  src={house.img} className="object-cover object-center h-[320px] w-full" alt="heaven property" />
-              <div className="lg:ml-3 pt-5 flex xl:block">
+              <div className="lg:ml-3 pt-5 flex justify-center items-center xl:block">
                 <DisplayImg displayImg={house.img}/>
               </div>
             </div>
