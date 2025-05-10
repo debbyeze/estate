@@ -22,7 +22,7 @@ const cart = useCartStore((state) =>state.cart );
 }
 {cart.map((prop) => (
        <div key={prop.id} className=" flex  justify-between  sm:items-center mx-1 sm:mx-5 shadow-md pb-2 px-3 lg:px-20 my-5">
-       <Link to={prop.to} className=" flex justify-between sm:items-center py-4 ">
+       <Link to={prop.to.replace(/\s/g, '-')} className=" flex justify-between sm:items-center py-4 ">
          <img src={prop.img} alt="heaven estate property" className="h-20 w-20 md:h-36 md:w-36  object-cover object-center group-hover:opacity-75"/>
 
           <div  className="flex flex-col md:flex-row justify-between md:items-center flex-nowrap ml-5">

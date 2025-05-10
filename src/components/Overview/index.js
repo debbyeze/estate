@@ -7,6 +7,7 @@ import NoPage from "../NoPage";
 import PageTitle from "../page-title";
 import {Heart} from 'lucide-react';
 import useCartStore from "../store";
+import DisplayImg from "../DisplayImg";
 
 
 const Overview = ({house}) => {
@@ -55,10 +56,13 @@ const cart = useCartStore((state) => state.cart);
       
         <div className="relative flex w-full items-center px-4 pb-8 pt-14 rounded-lg shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-white">
         <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 ">
-            <div className="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
+            <div className="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg sm:col-span-6 lg:col-span-6 xl:flex">
               <img  src={house.img} className="object-cover object-center h-[320px] w-full" alt="heaven property" />
+              <div className="lg:ml-3 pt-5 flex xl:block">
+                <DisplayImg displayImg={house.img}/>
+              </div>
             </div>
-            <div className="sm:col-span-8 lg:col-span-7 text-brown">
+            <div className="sm:col-span-6 lg:col-span-6 text-brown">
             <span className="bg-light  font-light rounded text-brown font-light text-sm p-2 ">{house.type}</span>
               <h2 className="text-2xl font-bold sm:pr-12 my-3">Location: {house.location}</h2>
 
@@ -69,7 +73,7 @@ const cart = useCartStore((state) => state.cart);
                 <p>Features: {house.features}</p>
                 <p className="my-5">{house.description}</p>
                 <p className="text-2xl">&#x20A6;{house.price}</p>
-                 <div className="md:flex">
+                 <div className="lg:flex">
                     <Link
                         to={whatsappLink} target="_blank" rel="noopener noreferrer"
                         className="mt-6 flex w-full items-center justify-center rounded-md border-2 border-brown bg-offwhite  px-8 py-3 text-base font-medium  text-brown focus:outline-none focus:ring-offset-2"
