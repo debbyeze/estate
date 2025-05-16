@@ -51,13 +51,13 @@ const cart = useCartStore((state) => state.cart);
   <>
      <PageTitle title={id + " | Heaven estate"}/>
     <section className="pt-16 bg-brown">
-      <div className="bg-offwhite relative isolate px-6 pt-8">
+      <div className="bg-white sm:bg-offwhite relative isolate px-2 sm:px-6 pt-8">
       
-        <div className="relative flex w-full items-center px-4 pb-8 pt-14 rounded-lg shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-white">
+        <div className="relative flex w-full items-center px-4 pb-8  rounded-lg shadow-2xl sm:px-6 pt-8 md:p-6 lg:p-8 bg-white">
         <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 ">
             <div className="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg sm:col-span-6 lg:col-span-6 xl:flex relative">
               <img  src={house.img} className="object-cover object-center h-[320px] w-full" alt="heaven property" />
-              <div className="lg:ml-3 pt-5 flex justify-center items-center xl:block">
+              <div className="lg:ml-3 pt-5 flex lg:justify-center lg:items-center xl:block">
                 <DisplayImg displayImg={house.img}/>
               </div>
             </div>
@@ -107,7 +107,7 @@ const cart = useCartStore((state) => state.cart);
 
 
 {/* featured houses */}
-        <section className="  bg-offwhite py-10">
+        <section className=" bg-white  sm:bg-offwhite py-10">
           <h3 className="text-2xl font-semibold tracking-tight text-brown pt-20 text-start sm:text-3xl uppercase px-4 md:px-16">
             Featured {house.type}s
           </h3>
@@ -126,7 +126,7 @@ const cart = useCartStore((state) => state.cart);
             </div>
 
             {/* oppositeProperties */}
-            <div className="border-2 border-white bg-white mx-auto max-w-2xl px-2 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-16 lg:py-8">
+            <div className="bg-white mx-auto max-w-2xl px-2 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-16 lg:py-8">
               <div className="grid container  grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-12">
                 <h4 className="text-2xl font-semibold tracking-tight text-brown pt-10 text-start sm:text-3xl uppercase  sm:mb-4 ">
                   You may also like
